@@ -20,9 +20,9 @@ $factory->define(App\Cliente::class, function (Faker\Generator $faker) {
         'rut' => $faker->numberBetween(111111111,999999999).'-'.$faker->numberBetween(0,9),
         'razon_social' => $faker->company,
         'telefono' => $faker->PhoneNumber,
-        'email' => $faker->unique()->safeEmail,
+        'correo' => $faker->unique()->safeEmail,
         'rep_legal' => $faker->firstNameMale .' '. $faker->firstNameMale .' '. $faker->lastName,
-        'comuna_id' => $faker->numberBetween(0,9),
+        'comuna_id' => $faker->numberBetween(1,346),
         'direccion' => $faker->Address,
     ];
 });

@@ -1,0 +1,25 @@
+
+
+funcion calcular promedio ultimas tres ventas{
+	
+	calcular cantidad de dias entre antepenultima venta y la ultima venta 
+
+	Xp = venta1 + venta2 / cantidad de dias entre v1->v2
+
+	for(V3c = V3c; V3c > 20% V3c; V3c-Xp){
+	se deve descontar la venta diaria a la cantidad inicial de la venta 3 y cuando sea menor al 20%
+	se genera la alerta.
+	}
+}
+
+
+
+
+calcular dias entre fechas (){
+
+	$datetime1 = new DateTime('2009-10-11');
+	$datetime2 = new DateTime('2009-10-13');
+	$interval = $datetime1->diff($datetime2);
+	echo $interval->format('%R%a días');
+
+}

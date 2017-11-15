@@ -63,7 +63,7 @@ desired effect
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>RTA</span>
+      <span class="logo-mini"><i class="fa fa-calendar"></i> </span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Agenda en </b>RUTA</span>
     </a>
@@ -114,8 +114,8 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">OPERACIONES</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
-        <li><a href="#"><i class="fa fa-user"></i> <span>Cliente</span></a></li>
+        <li class="active"><a href="/prototipo"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+        <li><a href="/clientes"><i class="fa fa-user"></i> <span>Cliente</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Acciones</span>
             <span class="pull-right-container">
@@ -137,10 +137,7 @@ desired effect
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
+     @yield('content')
 
     </section>
 
