@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     
+	protected $table = 'producto';
 
     public static function obtenerCliente(){
         return $this->belongsTo('App\Cliente');
