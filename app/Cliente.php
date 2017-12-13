@@ -47,9 +47,10 @@ class Cliente extends Model
         return $clientes;
     }
 
-    public static function Detalle_guias()
+    public static function Detalle_guias(){
     return $this->morphedByMany('App\Detalle_guias');
+    }
+
+
+
 }
-
-
-
