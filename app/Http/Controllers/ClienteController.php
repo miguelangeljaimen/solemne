@@ -25,7 +25,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.clientes.crear');
     }
 
     /**
@@ -58,7 +58,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+         return view('app.clientes.editar');
     }
 
     /**

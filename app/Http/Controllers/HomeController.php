@@ -27,12 +27,4 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function calcularDias(){
-        $date = "2016-09-17 11:00:00";
-        $datework = new Carbon($date);
-
-        Carbon::diffInDay()
-        printf(Carbon::createFromTimestamp(0)->diffInDays());
-        return view('app.testAgenda.index');
-    }
 }
