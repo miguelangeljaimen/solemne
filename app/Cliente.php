@@ -34,23 +34,12 @@ class Cliente extends Model
         return $this->hasMany('App\Producto');
     }
 
-    public static function algoritmoY(){
-        
-        return "hola";
+    public static function obtenerLlamados(){
+        return $this->hasMany('App\Lamado');
     }
 
-    public static function algoritmoX(){
-        $clientes = Cliente::all();
-        //$clientes = $clientes[1]->algoritmoY();
-        $clientes = $clientes[1]->nombre;
-
-        return $clientes;
+    public static function obtenerComuna(){
+        return $this->belongsTo('App\Comuna');
     }
-
-    public static function Detalle_guias(){
-    return $this->morphedByMany('App\Detalle_guias');
-    }
-
-
 
 }

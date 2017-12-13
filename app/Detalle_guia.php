@@ -7,17 +7,33 @@ use Illuminate\Database\Eloquent\Model;
 class Detalle_guia extends Model
 {
 
+/*
+Schema::create('detalle_guias', function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->integer('guia_id')->unsigned();
+            $table->foreign('guia_id')->references('id')->on('guias');                        
+
+
+            $table->integer('producto_id')->unsigned();
+            $table->foreign('producto_id')->references('id')->on('productos');                        
+
+
+            $table->integer('cantidad');
+
+            $table->timestamps();
+        });
+*/
 	protected $table = 'clientes';
 
-    protected $fillable = ['cantidad']
+    protected $fillable = ['guia_id','producto_id','cantidad']
 
     public static function obtenerProducto(){
-    return $this->morphedByMany ('App\Producto');
-}
+    return $this->belongsTo ('App\Producto');
+	}
+    
     public static function obtenerGuias(){
-    return $this->morphedByMany ('App\Guias');
-}
-    public satic function obtener llamados(){
-    return $this->morphedByMany('App\llamados');
-}
+    return $this->hasMany ('App\Guia');
+	}
+   
    } 
