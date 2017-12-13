@@ -14,7 +14,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Producto::paginate(10);
+        return view('app.productos.listar', ['productos'=>$productos]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.rpoductos.crear');
     }
 
     /**
@@ -46,7 +47,7 @@ class ProductoController extends Controller
      */
     public function show(Producto $producto)
     {
-        //
+        return view('app.productos.info');
     }
 
     /**
@@ -57,7 +58,7 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        //
+        return view('app.productos.editar');
     }
 
     /**

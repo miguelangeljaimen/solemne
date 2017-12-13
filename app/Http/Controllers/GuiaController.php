@@ -14,7 +14,8 @@ class GuiaController extends Controller
      */
     public function index()
     {
-        //
+        $guias = Guia::paginate(10);
+        return view('app.guias.listar', ['guias'=>$guias]);
     }
 
     /**
@@ -24,7 +25,7 @@ class GuiaController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.guias.crear');
     }
 
     /**
@@ -46,7 +47,7 @@ class GuiaController extends Controller
      */
     public function show(Guia $guia)
     {
-        //
+        return view('app.guias.info');
     }
 
     /**
@@ -57,7 +58,7 @@ class GuiaController extends Controller
      */
     public function edit(Guia $guia)
     {
-        //
+        return view('app.guias.editar');
     }
 
     /**
