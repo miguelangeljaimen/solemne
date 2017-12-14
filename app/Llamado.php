@@ -30,9 +30,11 @@ class Llamado extends Model
     protected $fillable = ['cliente_id','producto_id'];
 
 
-    public static function obtenerProducto()
+    public static function obtenerProducto(){
     	return $this->belongsTo('App\Producto');
+    }
 
-    public static function obtenerCliente()
+    public static function obtenerCliente(){
     	return $this->belongsTo('App\Cliente');
+    }
 }

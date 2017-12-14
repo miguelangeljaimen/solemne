@@ -25,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/test', 'HomeController@calcularDias')->name('test');
 
 Route::resource('clientes','ClienteController');
+Route::resource('llamados','LlamadoController');

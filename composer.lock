@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbfc7d932af91b0f5304c85430c278c8",
+    "content-hash": "fbe4f05cb34fdec9a89104a9630e1e07",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2105,6 +2105,36 @@
             "time": "2015-05-11T14:41:42+00:00"
         },
         {
+            "name": "miguelangel/agendamiento",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miguelangeljaimen/agendamiento.git",
+                "reference": "453f402f1243047678940efea41889305783ba14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miguelangeljaimen/agendamiento/zipball/453f402f1243047678940efea41889305783ba14",
+                "reference": "453f402f1243047678940efea41889305783ba14",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mjaimen\\Controladores\\": "src/Controladores/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "miguelangel",
+                    "email": "miguelangel.jaimen@gmail.com"
+                }
+            ],
+            "description": "proyecto academico",
+            "time": "2017-12-14T02:55:22+00:00"
+        },
+        {
             "name": "mockery/mockery",
             "version": "0.9.9",
             "source": {
@@ -3436,8 +3466,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "miguelangel/agendamiento": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
