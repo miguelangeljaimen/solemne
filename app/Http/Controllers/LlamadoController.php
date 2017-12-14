@@ -34,7 +34,7 @@ class LlamadoController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.llamados.crear');
     }
 
     /**
@@ -45,7 +45,29 @@ class LlamadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          
+
+               /*$cliente = new Llamado;
+                $cliente->pcompra = $request->pcompra; 
+                $cliente->ucompra = $request->ucompra; 
+                $cliente->total = $request->total; 
+                $cliente->cantucompra = $request->cantucompra; 
+                 */
+                
+                /*$llamado->save();
+                */
+
+    $cliente = ClienteControlador::crear($request->pcompra,$request->ucompra,$request->total,$request->cantucompra);
+
+ 
+    echo "diferencia = ".ClienteControlador::diferenciaDias($cliente)." <br/>";
+    echo "punto de reorden = ".ClienteControlador::puntoReorden($cliente)." <br/>";
+    echo "demanda diaria  = ".ClienteControlador::demandaDiaria($cliente)." <br/>";
+    if(ClienteControlador::algoritmoX($cliente) == "ya es muy tarde"){
+        echo "<h2>".ClienteControlador::algoritmoX($cliente)." :( <h2/><br/>";
+    }else{
+    echo "<h2>El cliente debe ser llamado en ".ClienteControlador::algoritmoX($cliente)." días <h2/><br/>";
+        }
     }
 
     /**
